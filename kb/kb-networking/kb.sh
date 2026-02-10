@@ -1,6 +1,6 @@
 #!/bin/bash
 # KB Networking - OSI Model, Protocols, Troubleshooting
-# Source: https://github.com/yourusername/kb-networking
+# Source: https://raw.githubusercontent.com/infoparticle/main/kb/kb-networking
 
 #######################
 # OSI MODEL
