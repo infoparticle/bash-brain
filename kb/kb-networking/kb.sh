@@ -1,10 +1,17 @@
 #!/bin/bash
 # KB Networking - OSI Model, Protocols, Troubleshooting
-# Source: https://raw.githubusercontent.com/infoparticle/main/kb/kb-networking
+# Source: https://raw.githubusercontent.com/infoparticle/bash-brain/main/kb/kb-networking
 
 #######################
 # OSI MODEL
 #######################
+REPO_USER="infoparticle"
+REPO_NAME="bash-brain"
+KB_NAME="kb-networking"
+INSTALL_DIR="$HOME/.kb"
+INSTALL_FILE="$INSTALL_DIR/${KB_NAME}.sh"
+RAW_URL="https://raw.githubusercontent.com/${REPO_USER}/${REPO_NAME}/main/kb/${KB_NAME}/kb.sh"
+
 
 kb.net.osi_layers() {
     cat << 'EOF'
@@ -661,12 +668,6 @@ kb.net.search() {
     echo "Searching networking functions for: $query"
     compgen -A function | grep "^kb\.net\." | grep -i "$query" | sort
 }
-
-
-# Show help on load
-echo "KB Networking loaded. Type 'kb.net.help' for usage."
-#!/bin/bash
-# KB Networking - Fundamental Concepts and Definitions
 
 #######################
 # FUNDAMENTAL CONCEPTS
@@ -1711,7 +1712,7 @@ Tab completion:
   kb.net.concepts.<TAB>                  # Show all concepts
   kb.net.osi.<TAB>                       # Show OSI layers
 
-Install: curl -sSL https://raw.githubusercontent.com/yourusername/kb-networking/main/install.sh | bash
+Install: curl -sSL $RAW_URL | bash
 EOF
 }
 
